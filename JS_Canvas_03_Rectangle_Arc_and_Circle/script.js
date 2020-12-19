@@ -24,12 +24,21 @@ canvas.height = 500;
 
 // рисуем окружность
 
-context.beginPath();
+
 // координаты центра окружности 2шт., радиус окружности, стартовый и конечный угол дуги в радианах, необязательный параметр в какую сторону рисуем дугу по умолчанию false
 // context.arc(250, 250, 75,  Math.PI / 4,  5 * Math.PI / 4);
-context.arc(250, 250, 100,  degreesToRadians(0),  degreesToRadians(360));
+context.beginPath()
+context.strokeStyle = "black";
+context.fillStyle = "blue";
+context.rect(100, 100, 300, 300);
 context.lineWidth = 10;
-context.strokeStyle = "blue";
-context.fillStyle = "red";
+context.fill();
+context.stroke();
+
+context.beginPath()
+context.arc(250, 250, 100,  degreesToRadians(-40),  degreesToRadians(270));
+context.lineWidth = 5;
+context.strokeStyle = "red";
+context.fillStyle = "yellow";
 context.fill();
 context.stroke();
