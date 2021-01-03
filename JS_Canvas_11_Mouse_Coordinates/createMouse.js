@@ -31,7 +31,7 @@ function createMouse(element) {
     };
     
     function mousemoveHandler(event) {
-       const rect = canvas.getBoundingClientRect();
+       const rect = element.getBoundingClientRect();
        mouse.x = event.clientX - rect.left;
        mouse.y = event.clientY - rect.top;
     
